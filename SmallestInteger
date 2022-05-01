@@ -1,0 +1,31 @@
+#include <iostream>
+#include <valarray>
+/**
+ * program to find the smallest value of several integers
+ */
+using namespace std;
+
+int main() {
+
+    int number;
+    cout << "Enter the number o integers you want to compare: ";
+    cin >> number;
+    int nums[number];
+    cout << endl;
+
+    cout << "Enter the integers: ";
+    for (int i = 0; i < number; ++i) {
+        cin >> nums[i];
+    }
+
+    int small = nums[0];
+    for (int i = 1; i < number; ++i) {
+        if(nums[i] < small){
+            small = nums[i];
+        }
+    }
+    cout << "Smallest: " << small << endl;
+
+
+    return 0;
+}
