@@ -1,0 +1,30 @@
+#include <iostream>
+
+bool isFactor(int first, int second);
+
+using namespace std;
+/**
+ * program to check if second integer is a factor of first
+ */
+
+int main() {
+    int first, second;
+    cout << "Enter two integers: ";
+    cin >> first;
+    cin>>second;
+
+    if(isFactor(first,second)){
+        cout << second << " is a factor of " << first << endl;
+    }
+    else
+        cout << second << " is not a factor of " << first << endl;
+
+    return 0;
+}
+
+bool isFactor(int f, int s) {
+    if(f%s == 0)
+        return true;
+    else
+        return false;
+}
